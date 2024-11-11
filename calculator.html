@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - Holy Grail Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <b>Simple Calculator</b>
+</header>
+
+<div class="container">
+    <div class="left-sidebar">
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content" >
+        <div class="calculator">
+            <input type="text" id="display" class="display" disabled>
+
+            <div>
+                <button class="button" onclick="appendNumber('7')">7</button>
+                <button class="button" onclick="appendNumber('8')">8</button>
+                <button class="button" onclick="appendNumber('9')">9</button>
+                <button class="button operator" onclick="appendOperator('/')">/</button>
+            </div>
+
+            <div>
+                <button class="button" onclick="appendNumber('4')">4</button>
+                <button class="button" onclick="appendNumber('5')">5</button>
+                <button class="button" onclick="appendNumber('6')">6</button>
+                <button class="button operator" onclick="appendOperator('*')">*</button>
+            </div>
+
+            <div>
+                <button class="button" onclick="appendNumber('1')">1</button>
+                <button class="button" onclick="appendNumber('2')">2</button>
+                <button class="button" onclick="appendNumber('3')">3</button>
+                <button class="button operator" onclick="appendOperator('-')">-</button>
+            </div>
+
+            <div>
+                <button class="button" onclick="appendNumber('0')">0</button>
+                <button class="button" onclick="appendNumber('.')">.</button>
+                <button class="button operator" onclick="appendOperator('+')">+</button>
+                <button class="button equal" onclick="calculate()">=</button>
+            </div>
+
+            <div>
+                <button class="button clear" onclick="clearDisplay()">C</button>
+                <button class="button clear" onclick="deleteLast()">DEL</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-sidebar">
+        <h3>Advertisement</h3>
+        <p>Check out our latest products!</p>
+        <p>Click on image to view products.</p>
+        <br><br><br>
+        <a href="https://a.co/d/5UIgetv" target="_blank">
+        <img src="cal1.png">
+        </a>
+        <br><br>
+        <a href="https://a.co/d/1l64zdx" target="_blank">
+        <img src="cal2.png">
+        </a>
+    </div>
+</div>
+
+<footer>
+    <p>Last updated: 
+        <span id="lastModified"></span>
+    </p>
+</footer>
+<script type="text/javascript">
+     var x = document.lastModified;
+     document.getElementById('lastModified').textContent = x;
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
